@@ -10,10 +10,12 @@ form1.addEventListener("submit", (e) => {
     .then((response) => response.json())
     .then((data) => {
       competidor1.innerHTML = `
-          <div class="box"><img src="${data.sprites.front_default}" alt="Imagem do ${data.name}"></div>
+          <div class="box"><img src="${
+            data.sprites.front_default
+          }" alt="Imagem do ${data.name}"></div>
           <div class="btn">Nome: ${data.name}</div>
-          <div class="btn">Altura: ${data.height}</div>
-          <div class="btn">Peso: ${data.weight}</div>
+          <div class="btn">Altura: ${data.height / 10}m</div>
+          <div class="btn">Peso: ${data.weight / 10}kg</div>
           `;
     });
 });
@@ -26,10 +28,12 @@ form2.addEventListener("submit", (e) => {
     .then((response) => response.json())
     .then((data) => {
       competidor2.innerHTML = `
-          <div class="box"><img src="${data.sprites.front_default}" alt="Imagem do ${data.name}"></div>
+          <div class="box"><img src="${
+            data.sprites.front_default
+          }" alt="Imagem do ${data.name}"></div>
           <div class="btn">Nome: ${data.name}</div>
-          <div class="btn">Altura: ${data.height}</div>
-          <div class="btn">Peso: ${data.weight}</div>
+          <div class="btn">Altura: ${data.height / 10}m</div>
+          <div class="btn">Peso: ${data.weight / 10}kg</div>
           `;
     });
 });
